@@ -21,3 +21,18 @@ function sair() {
     alert('até mais!')
     area.innerHTML = 'você saiu!'
 }
+
+function mediaAluno(nota1, nota2) {
+    var media = (nota1 + nota2) / 2
+
+    if (media >= 7) {
+        console.log('aluno aprovado com a média: ' + media)
+    } else if (media < 7) {
+     console.log('aluno reprovado com a média: ' + media)
+    }
+}
+
+function aluno(nome, curso) {
+    var mensangem = 'seja bem-vindo ' + nome + ' ao curso de ' + curso
+    console.log(mensangem)
+}
