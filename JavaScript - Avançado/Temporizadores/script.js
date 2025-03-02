@@ -1,55 +1,16 @@
-let listElement = document.querySelector('#app ul')
-let inputElement = document.querySelector('#app input')
-let buttonElement = document.querySelector('#app button')
+// temporizadores
 
-let tarefas = JSON.parse(localStorage.getItem('@listaDeTarefas')) || []
-
-function adicionarTarefas() {
-    if (inputElement.value === '') {
-        alert('DIGITE ALGUMA TAREFA')
-        return false
-    } else {
-        let novaTarefa = inputElement.value
-        tarefas.push(novaTarefa)
-        inputElement.value = ''
-        renderTarefas()
-        salvarDados()
-    }
+// setInterval
+function acao() {
+    document.write('teste! <br/>')
 }
 
-function renderTarefas() {
-    listElement.innerHTML = ''
-    tarefas.map((toDo) => {
-        let liElement = document.createElement('li')
-        let tarefaText = document.createTextNode(toDo)
+// setInterval(acao, 1000)
 
-        let linkElement = document.createElement('a')
-        linkElement.setAttribute('href', '#')
+// função anônima
+// var timer = setInterval(() => {
+//     document.write('executando! <br/>')
+// }, 1000)
 
-        let linkText = document.createTextNode(' excluir')
-        linkElement.appendChild(linkText)
-
-        let posicao = tarefas.indexOf(toDo)
-
-        linkElement.setAttribute('onclick', `deletarTarefa(${posicao})`)
-
-        liElement.appendChild(tarefaText)
-        liElement.appendChild(linkElement)
-        listElement.appendChild(liElement)
-
-    })
-}
-
-function deletarTarefa(posicao) {
-    tarefas.splice(posicao, 1)
-    renderTarefas()
-    salvarDados()
-}
-
-function salvarDados() {
-    localStorage.setItem('@listaDeTarefas', JSON.stringify(tarefas))
-}
-
-buttonElement.onclick = adicionarTarefas
-
-renderTarefas()
+// setTimeout
+setTimeout(acao, 3000)
