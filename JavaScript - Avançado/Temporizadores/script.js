@@ -1,16 +1,38 @@
-// temporizadores
+// diferença entre var, let e const
 
-// setInterval
-function acao() {
-    document.write('teste! <br/>')
+var nome = 'Marlon'
+
+if (nome == 'Marlon') {
+    var sobrenome = 'Silva'
 }
 
-// setInterval(acao, 1000)
+alert(sobrenome)
 
-// função anônima
-// var timer = setInterval(() => {
-//     document.write('executando! <br/>')
-// }, 1000)
+nome = 'Fernanda'
 
-// setTimeout
-setTimeout(acao, 3000)
+alert(nome)
+
+
+let nome = 'Marlon'
+
+if (nome == 'Marlon') {
+    let sobrenome = 'Silva'
+}
+
+alert(sobrenome)
+
+nome = 'Fernanda'
+
+alert(nome)
+
+const nome = 'Marlon'
+
+if (nome == 'Marlon') {
+    const sobrenome = 'Silva'
+}
+
+alert(sobrenome)
+
+nome = 'Fernanda'
+
+alert(nome)
