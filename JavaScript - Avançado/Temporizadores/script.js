@@ -1,38 +1,33 @@
-// diferença entre var, let e const
+// Objetos
 
-var nome = 'Marlon'
-
-if (nome == 'Marlon') {
-    var sobrenome = 'Silva'
+let pessoa = {
+    nome: 'Marlon',
+    idade: 21,
+    altura: 1.77,
+    cargo: 'Estudante'
 }
 
-alert(sobrenome)
+console.log(pessoa)
+console.log(pessoa.nome)
 
-nome = 'Fernanda'
-
-alert(nome)
-
-
-let nome = 'Marlon'
-
-if (nome == 'Marlon') {
-    let sobrenome = 'Silva'
+let carro = {
+    modelo: 'Lancer EVO',
+    cor: 'Preto',
+    potencia: '280cv'
 }
 
-alert(sobrenome)
+console.log(carro)
+console.log(carro.potencia)
 
-nome = 'Fernanda'
+let carros = [
+    { modelo: 'Ferrari Spider', cor: 'Vermelho', potencia: '780cv' },
+    { modelo: 'Porsche 911', cor: 'Prata', potencia: '580cv' },
+    { modelo: 'Lamborghini Huracán', cor: 'Preto', potencia: '640cv' }
+]
 
-alert(nome)
+console.log(carros)
+console.log(carros[0])
 
-const nome = 'Marlon'
-
-if (nome == 'Marlon') {
-    const sobrenome = 'Silva'
-}
-
-alert(sobrenome)
-
-nome = 'Fernanda'
-
-alert(nome)
+carros.forEach((carro) => {
+    console.log(carro.modelo)
+})
